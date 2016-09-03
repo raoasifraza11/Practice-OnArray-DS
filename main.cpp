@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
     try {
         
         /**
-         * Uncomment the require problem to run
+         * UNCOMMENT the require problem to run
          * the OUTPUT of the Prboblem.
          *
          * Default is 'problem1()';
