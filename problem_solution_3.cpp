@@ -12,29 +12,29 @@
 #include "problemsolutions.hpp"
 
 void problem3(){
-    int const SIZE_ROWsnCOLs = 8;   // Size of 2D array
-    char queen = 'Q';               // Queen symbol
-    char symbol = '*';              // char symbol
-    char tab = '\t';                // escape sequences for format the output
+    unsigned int const MAXROWsnCOLs = 8;    // Size of 2D array
+    char queen = 'Q';                       // Queen symbol
+    char symbol = '*';                      // char symbol
+    char tab = '\t';                        // escape sequences for format the output
     int queenPositions[8] = {0, 3,
                              4, 0,
                              0, 7,
-                             6, 7}; // Place of Queen in Columns
+                             6, 7};         // Place of Queen in Columns
     std::string
-        cheesBoard[SIZE_ROWsnCOLs]
-                  [SIZE_ROWsnCOLs]; // 2D Array of Strings
+        cheesBoard[MAXROWsnCOLs]
+                  [MAXROWsnCOLs];           // 2D Array of Strings
     
     
     //Loop depends of size of Array
-    for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
+    for (int i = 0; i < MAXROWsnCOLs; i++) {
         cheesBoard[i][queenPositions[i]] = queen;
     }
     
     
     // Loop for OUTPUT
     std::cout << "OUTPUT:" << std::endl << std::endl;
-    for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
-        for (int j = 0; j < SIZE_ROWsnCOLs; j++) {
+    for (int i = 0; i < MAXROWsnCOLs; i++) {
+        for (int j = 0; j < MAXROWsnCOLs; j++) {
             if(cheesBoard[i][j] == "Q")
                 std::cout<< queen << tab;
             else

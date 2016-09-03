@@ -12,33 +12,33 @@
 #include "problemsolutions.hpp"
 
 void problem5(){
-    int const SIZE_ROWsnCOLs = 8;   // Size of 2D array
-    char queen = 'Q';               // Queen symbol
-    char symbol = '*';              // char symbol
-    char tab = '\t';                // escape sequences for format the output
-    int counter = 0;                // counter
+    unsigned int const MAXROWsnCOLs = 8;    // Size of 2D array
+    char queen = 'Q';                       // Queen symbol
+    char symbol = '*';                      // char symbol
+    char tab = '\t';                        // escape sequences for format the output
+    int counter = 0;                        // counter
     int queenPosition[8] = {0, 0,
                             1, 2,
                             3, 4,
-                            5, 6}; // Place of Queen in Columns
+                            5, 6};          // Place of Queen in Columns
     std::string
-    cheesBoard[SIZE_ROWsnCOLs]
-    [SIZE_ROWsnCOLs]; // 2D Array of Strings
+    cheesBoard[MAXROWsnCOLs]
+                [MAXROWsnCOLs];             // 2D Array of Strings
     
     
     //Loop depends of size of Array
-    for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
+    for (int i = 0; i < MAXROWsnCOLs; i++) {
         cheesBoard[queenPosition[i]][i] = queen;
     }
     
     
     // Loop to check 'Queen' duplicate
-    for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
-        for (int j = 0; j < SIZE_ROWsnCOLs; j++) {
+    for (int i = 0; i < MAXROWsnCOLs; i++) {
+        for (int j = 0; j < MAXROWsnCOLs; j++) {
             if(cheesBoard[i][j]== "Q"){
                 counter++;
                 if(counter == 2){
-                    i = SIZE_ROWsnCOLs;
+                    i = MAXROWsnCOLs;
                     break;
                 }
             }
@@ -51,8 +51,8 @@ void problem5(){
     
     // Loop for OUTPUT
     std::cout << "OUTPUT:" << std::endl << std::endl;
-    for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
-        for (int j = 0; j < SIZE_ROWsnCOLs; j++) {
+    for (int i = 0; i < MAXROWsnCOLs; i++) {
+        for (int j = 0; j < MAXROWsnCOLs; j++) {
             (cheesBoard[i][j] == "Q") ? std::cout<< queen << tab :  std::cout<< symbol << tab;
         }
         std::cout << std::endl;

@@ -12,14 +12,14 @@
 
 void problem1() {
     
-    int const SIZE_OF_ARRAY = 10;   // Length of Array
-    int const LIMIT_RANGE = 100;    // Control the limit of auto Generate int
-    int sum = 0;                    // Compute Variable
-    int avg = 0;                    // Avg store
-    int count = 0;                  // count the number of sums
+    unsigned int const MAXARRAYSIZE = 10;    // Length of Array
+    unsigned int const MAXRANGE = 100;       // Control the limit of auto Generate int
+    unsigned int sum = 0;                    // Compute Variable
+    unsigned int avg = 0;                    // Avg store
+    unsigned int count = 0;                  // count the number of sums
     
     // An Array
-    int arr[SIZE_OF_ARRAY];
+    int arr[MAXARRAYSIZE];
     
     // Intro
     std::cout << "Problem 1 Solution" << std::endl << std::endl;
@@ -27,7 +27,7 @@ void problem1() {
     
     // Loop depends on size of Array
     
-    for (int i = 0; i < SIZE_OF_ARRAY; i++) {
+    for (int i = 0; i < MAXARRAYSIZE; i++) {
         
         /**
          * Uncommenct these lines for user input.
@@ -36,15 +36,15 @@ void problem1() {
         //std::cin >> arr[i] = ;
         
         // Reset in all itreations
-        int randomvalue = rand() % LIMIT_RANGE; // Auto Generate int Vlaues range 0 - 99;
+        unsigned int randValue = rand() % MAXRANGE; // Auto Generate int Vlaues range 0 - 99;
         
-        std::cout << "Entered Auto Generated int at Index "<< i <<": " << randomvalue << std::endl;
-        arr[i] = randomvalue;
+        std::cout << "Entered Auto Generated int at Index "<< i <<": " << randValue << std::endl;
+        arr[i] = randValue;
         
         // Calculate compute
         sum+=arr[i];
     }
-    avg = sum / SIZE_OF_ARRAY;
+    avg = sum / MAXARRAYSIZE;
     std::cout << std::endl <<  "The Average is : " << avg << std::endl << std::endl;
     
     
@@ -54,7 +54,7 @@ void problem1() {
     
     // Rest sum with 0
     sum = 0;
-    for (int i = 0; i < SIZE_OF_ARRAY; i++) {
+    for (int i = 0; i < MAXARRAYSIZE; i++) {
         if(arr[i] > avg){
             
             std::cout << "Value at index " << i << " :" << arr[i] << std::endl;
