@@ -12,12 +12,12 @@
 #include "problemsolutions.hpp"
 
 void problem5(){
-    unsigned int const MAXROWsnCOLs = 8;    // Size of 2D array
+    unsigned const int MAXROWsnCOLs = 8;    // Size of 2D array
     char queen = 'Q';                       // Queen symbol
     char symbol = '*';                      // char symbol
     char tab = '\t';                        // escape sequences for format the output
-    int counter = 0;                        // counter
-    int queenPosition[8] = {0, 0,
+    short counter = 0;                        // counter
+    short queenPosition[8] = {0, 0,
                             1, 2,
                             3, 4,
                             5, 6};          // Place of Queen in Columns

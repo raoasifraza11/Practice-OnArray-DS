@@ -12,15 +12,15 @@
 #include "problemsolutions.hpp"
 
 void problem6(){
-    int const SIZE_ROWsnCOLs = 8;   // Size of 2D array
-    char queen = 'Q';               // Queen symbol
-    char symbol = '*';              // char symbol
-    char tab = '\t';                // escape sequences for format the output
-    int counter = 0;                // counter
-    int queenPosition[8] = {2, 3,
-        4, 0,
-        1, 7,
-        6, 5};  // Place of Queen in Columns
+    unsigned const int SIZE_ROWsnCOLs = 8;   // Size of 2D array
+    char queen = 'Q';                        // Queen symbol
+    char symbol = '*';                       // char symbol
+    char tab = '\t';                         // escape sequences for format the output
+    bool flag = false;                       // counter
+    short queenPosition[8] = {1, 1,
+        1, 1,
+        1, 0,
+        1, 1};                               // Place of Queen in Columns
     std::string
     cheesBoard[SIZE_ROWsnCOLs]
     [SIZE_ROWsnCOLs]; // 2D Array of Strings
@@ -35,17 +35,14 @@ void problem6(){
     // Loop to check 'Queen' duplicate
     for (int i = 0; i < SIZE_ROWsnCOLs; i++) {
         for (int j = 0; j < SIZE_ROWsnCOLs; j++) {
-            if(cheesBoard[i][j]== "Q"){
-                counter++;
-                if(counter == 2){
+            if(cheesBoard[i][j]== "Q" && j > 0){
+                if(cheesBoard[i+1][j-1] == "Q"|| cheesBoard[i+1][j+1] == "Q"){
                     i = SIZE_ROWsnCOLs;
+                    flag = true;
                     break;
                 }
             }
         }
-        
-        // Reset the counter depends on conditoin
-        (counter < 2) ? counter = 0 : counter ;
     }
     
     
@@ -59,7 +56,7 @@ void problem6(){
     }
     
     // Result:
-    (counter == 2)? std::cout << "\nOK\n": std::cout << "\nNot Good\n";
+    flag? std::cout << "\nNot Good\n": std::cout << "\nOK\n";
     
     std::cout << "\n\t***** Because ******\n"
     << "Makes Diagonal."

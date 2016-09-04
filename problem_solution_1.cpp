@@ -12,11 +12,11 @@
 
 void problem1() {
     
-    unsigned int const MAXARRAYSIZE = 10;    // Length of Array
-    unsigned int const MAXRANGE = 100;       // Control the limit of auto Generate int
-    unsigned int sum = 0;                    // Compute Variable
-    unsigned int avg = 0;                    // Avg store
-    unsigned int count = 0;                  // count the number of sums
+    unsigned const short MAXARRAYSIZE = 10;    // Length of Array
+    unsigned const short MAXRANGE = 100;       // Control the limit of auto Generate int
+    unsigned int sum = 0;                      // Compute Variable
+    unsigned short avg = 0;                    // Avg store
+    unsigned short count = 0;                  // count the number of sums
     
     // An Array
     int arr[MAXARRAYSIZE];
@@ -36,7 +36,7 @@ void problem1() {
         //std::cin >> arr[i] = ;
         
         // Reset in all itreations
-        unsigned int randValue = rand() % MAXRANGE; // Auto Generate int Vlaues range 0 - 99;
+        unsigned short randValue = rand() % MAXRANGE; // Auto Generate int Vlaues range 0 - 99;
         
         std::cout << "Entered Auto Generated int at Index "<< i <<": " << randValue << std::endl;
         arr[i] = randValue;
@@ -56,10 +56,9 @@ void problem1() {
     sum = 0;
     for (int i = 0; i < MAXARRAYSIZE; i++) {
         if(arr[i] > avg){
-            
             std::cout << "Value at index " << i << " :" << arr[i] << std::endl;
             sum+= arr[i];
-            ++count;                   // increment by one;
+            ++count;      // increment by one;
         }
     }
     

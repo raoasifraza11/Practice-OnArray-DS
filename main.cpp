@@ -21,12 +21,12 @@ int main(int argc, const char * argv[]) {
          * Default is 'problem1()';
          */
         
-        problem1();
+        //problem1();
         //problem2();
         //problem3();
         //problem4();
         //problem5();
-        //problem6();
+        problem6();
 
     } catch (std::exception& ex) {
         std::cout << ex.what() << std::endl;

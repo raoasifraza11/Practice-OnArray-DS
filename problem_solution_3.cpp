@@ -12,11 +12,11 @@
 #include "problemsolutions.hpp"
 
 void problem3(){
-    unsigned int const MAXROWsnCOLs = 8;    // Size of 2D array
+    unsigned const int MAXROWsnCOLs = 8;    // Size of 2D array
     char queen = 'Q';                       // Queen symbol
     char symbol = '*';                      // char symbol
     char tab = '\t';                        // escape sequences for format the output
-    int queenPositions[8] = {0, 3,
+    short queenPositions[8] = {0, 3,
                              4, 0,
                              0, 7,
                              6, 7};         // Place of Queen in Columns
@@ -35,10 +35,7 @@ void problem3(){
     std::cout << "OUTPUT:" << std::endl << std::endl;
     for (int i = 0; i < MAXROWsnCOLs; i++) {
         for (int j = 0; j < MAXROWsnCOLs; j++) {
-            if(cheesBoard[i][j] == "Q")
-                std::cout<< queen << tab;
-            else
-                std::cout<< symbol << tab;
+            (cheesBoard[i][j] == "Q") ? std::cout<< queen << tab : std::cout<< symbol << tab;
         }
         std::cout << std::endl;
     }
