@@ -16,3 +16,7 @@ Eight queens are to be placed on an 8 x 8 chessboard in such a very that one que
 an arry x[] with capacity 8 to represent such a confuguration. If x[r] has value c then in row r there is a queen in column
 c. Write a program that asks a user to enter the column that contain queens in the 8 rows. The program than prints the board
 For example. If the user enters 0, 3, 4, 0, 0, 7, 6, 7 the program should print.
+
+# Problem (4)
+
+testing
