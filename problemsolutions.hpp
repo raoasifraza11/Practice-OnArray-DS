@@ -13,7 +13,7 @@
 #define problemsolutions_hpp
 
 #include <stdio.h>
-#include <iostream>
+#include <iostream>     // <<, >>, cout, cin
 
 void problem1();
 void problem2();

@@ -13,10 +13,10 @@
 #include "problemsolutions.hpp"
 
 void problem2(){
-    unsigned int const MAXARRAYSIZE = 20;       // size of array
-    unsigned int const MAXRANGE = 40;           // Limit of random value
-    unsigned int randValue = 0;                 // random values
-    unsigned int array[MAXARRAYSIZE];           // Array with length of 20
+    unsigned const short MAXARRAYSIZE = 20;       // size of array
+    unsigned const short MAXRANGE = 40;           // Limit of random value
+    unsigned short randValue = 0;                 // random values
+    unsigned short array[MAXARRAYSIZE];           // Array with length of 20
     
     // Loop is depends on the size of array
     for (int i = 0; i < MAXARRAYSIZE; i++) {
